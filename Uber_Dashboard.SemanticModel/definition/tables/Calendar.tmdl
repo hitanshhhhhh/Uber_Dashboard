@@ -1,0 +1,51 @@
+table Calendar
+	lineageTag: 11f7e4ab-6c2c-4ba9-b169-c0f3dba25bcc
+
+	column Date
+		formatString: General Date
+		lineageTag: 04bbce22-04b1-4222-be06-bf7e3d957adc
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: UBER[Date]
+
+		variation Variation
+			isDefault
+			relationship: 3c0632ac-5091-4fbe-8dee-8d2e01b31b45
+			defaultHierarchy: LocalDateTable_b0b013c6-a012-4a28-9b63-375cd0c755fb.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month = FORMAT('Calendar'[Date],"mmm")
+		lineageTag: 4d6333ef-0d67-4fee-8a0d-7ce8ff150dbb
+		summarizeBy: none
+		sortByColumn: MonthIndex
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthIndex = MONTH('Calendar'[Date])
+		formatString: 0
+		lineageTag: 7bac6743-2c3f-4e5a-9151-9d47cf6244d7
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter = "Q"&QUARTER('Calendar'[Date])
+		lineageTag: b0594b2c-92b4-43c8-a9b3-616ba8f496b0
+		summarizeBy: none
+		sortByColumn: QuarterIndex
+
+		annotation SummarizationSetBy = Automatic
+
+	column QuarterIndex = QUARTER('Calendar'[Date])
+		formatString: 0
+		lineageTag: 9ab148eb-5b8f-4980-9f0b-9b1e2d9e881b
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Calendar = calculated
+		mode: import
+		source = SUMMARIZE(UBER,UBER[Date])
+
+	annotation PBI_Id = ff47081e0e4d468eba00dde9c68d0ff5
+

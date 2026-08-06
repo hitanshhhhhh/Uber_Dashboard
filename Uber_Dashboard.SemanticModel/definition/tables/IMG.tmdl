@@ -1,0 +1,35 @@
+table IMG
+	lineageTag: d63ed062-0579-4bbc-9ef3-0a9329c0b1d7
+
+	column 'Vehicle Type'
+		dataType: string
+		lineageTag: 18068d8c-5725-4864-b7b4-67cbeecf7311
+		summarizeBy: none
+		sourceColumn: Vehicle Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Img
+		dataType: string
+		lineageTag: 855aae2f-5d98-4ab2-9c26-96a1be5d7b79
+		summarizeBy: none
+		sourceColumn: Img
+
+		annotation SummarizationSetBy = Automatic
+
+	partition IMG = m
+		mode: import
+		source =
+				let
+				  Source = Excel.Workbook(File.Contents("D:\Coding_Projects\PowerBI\uber_dataset.xlsx"), null, true),
+				  #"Navigation 1" = Source{[Item = "Veh_IMG", Kind = "Sheet"]}[Data],
+				  #"Changed column type" = Table.TransformColumnTypes(#"Navigation 1", {{"Column1", type text}, {"Column2", type text}}, "en-US"),
+				    #"Promoted Headers" = Table.PromoteHeaders(#"Changed column type", [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Vehicle Type", type text}, {"Img", type text}})
+				in
+				  #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,27 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-IN
+	valueFilterBehavior: independent
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["UBER","IMG","Sheet3"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table UBER
+ref table DateTableTemplate_1e6799b1-7988-436b-9c7d-e5b7bd1a3675
+ref table LocalDateTable_d8085e3e-c774-4810-82f9-bf06b589e7bc
+ref table IMG
+ref table Sheet3
+ref table _Measures
+ref table Calendar
+ref table LocalDateTable_b0b013c6-a012-4a28-9b63-375cd0c755fb
+ref table 'Date Axis'
+
+ref cultureInfo en-US
+

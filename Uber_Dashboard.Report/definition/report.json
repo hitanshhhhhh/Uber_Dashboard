@@ -1,0 +1,148 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.3.0/schema.json",
+  "themeCollection": {
+    "baseTheme": {
+      "name": "CY26SU07",
+      "reportVersionAtImport": {
+        "visual": "2.11.0",
+        "report": "3.4.0",
+        "page": "2.3.1"
+      },
+      "type": "SharedResources"
+    },
+    "customTheme": {
+      "name": "Custom5192660200431688.json",
+      "reportVersionAtImport": {
+        "visual": "2.11.0",
+        "report": "3.4.0",
+        "page": "2.3.1"
+      },
+      "type": "RegisteredResources"
+    }
+  },
+  "objects": {
+    "section": [
+      {
+        "properties": {
+          "verticalAlignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Top'"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "resourcePackages": [
+    {
+      "name": "SharedResources",
+      "type": "SharedResources",
+      "items": [
+        {
+          "name": "CY26SU07",
+          "path": "BaseThemes/CY26SU07.json",
+          "type": "BaseTheme"
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "_116572753455467137.jpg",
+          "path": "_116572753455467137.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "1659761100uber-logo-png23337115099418826.png",
+          "path": "1659761100uber-logo-png23337115099418826.png",
+          "type": "Image"
+        },
+        {
+          "name": "arrival(1)9324729966599198.png",
+          "path": "arrival(1)9324729966599198.png",
+          "type": "Image"
+        },
+        {
+          "name": "Custom5192660200431688.json",
+          "path": "Custom5192660200431688.json",
+          "type": "CustomTheme"
+        },
+        {
+          "name": "distance_(1)9257627242997618.png",
+          "path": "distance_(1)9257627242997618.png",
+          "type": "Image"
+        },
+        {
+          "name": "distance(1)9646529031604383.png",
+          "path": "distance(1)9646529031604383.png",
+          "type": "Image"
+        },
+        {
+          "name": "Group_1_(67)8708246167744662.png",
+          "path": "Group_1_(67)8708246167744662.png",
+          "type": "Image"
+        },
+        {
+          "name": "growth_(4)13570112605604268.png",
+          "path": "growth_(4)13570112605604268.png",
+          "type": "Image"
+        },
+        {
+          "name": "IntercityComfort46105735510481183.png",
+          "path": "IntercityComfort46105735510481183.png",
+          "type": "Image"
+        },
+        {
+          "name": "location_(3)(1)1911631092231404.png",
+          "path": "location_(3)(1)1911631092231404.png",
+          "type": "Image"
+        },
+        {
+          "name": "menu_(4)(1)5294132556410944.png",
+          "path": "menu_(4)(1)5294132556410944.png",
+          "type": "Image"
+        },
+        {
+          "name": "sedan043211086753786154.png",
+          "path": "sedan043211086753786154.png",
+          "type": "Image"
+        },
+        {
+          "name": "Setting_Changes49751139927165866.png",
+          "path": "Setting_Changes49751139927165866.png",
+          "type": "Image"
+        },
+        {
+          "name": "Stars_Rating_Star_Four_Review_9309462069934846.jpe",
+          "path": "Stars_Rating_Star_Four_Review_9309462069934846.jpe",
+          "type": "Image"
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "useStylableVisualContainerHeader": true,
+    "exportDataMode": "AllowSummarized",
+    "defaultDrillFilterOtherVisuals": true,
+    "allowChangeFilterTypes": true,
+    "useEnhancedTooltips": true,
+    "useDefaultAggregateDisplayName": true
+  }
+}

@@ -1,0 +1,50 @@
+table _Measures
+	lineageTag: 87d3f9c5-c1e5-4f75-9fa2-6da760af3ab4
+
+	measure Booking_Count = DISTINCTCOUNT(UBER[Booking ID])
+		formatString: 0
+		lineageTag: ad217ba6-ab49-43e7-9de6-da0a2e3e953a
+
+	measure Completed_Bookings = CALCULATE([Booking_Count],UBER[Booking Status]="Completed")
+		formatString: 0
+		lineageTag: cfc6dce1-c07e-45a0-ac48-420bc32262ee
+
+	measure Lost_Bookings = CALCULATE([Booking_Count],UBER[Booking Status]<>"Completed")
+		formatString: 0
+		lineageTag: 0efaf6ec-f7db-4950-abe4-28ab5bbda32d
+
+	measure Booking_Value = SUM(UBER[Booking Value])
+		formatString: 0
+		lineageTag: e6254ce4-ea99-4463-8d19-387df458a9f8
+
+	measure Total_Distance = SUM(UBER[Ride Distance])
+		lineageTag: c7853433-fb40-490a-ae83-e8ea4ffe3e5b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Average_Distance = AVERAGE(UBER[Ride Distance])
+		lineageTag: ea85d07f-11f9-469c-bb68-1cc900087a7a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Bookings_Remove_Status_Filter = CALCULATE([Booking_Count],ALL(UBER[Booking Status]))
+		formatString: 0
+		lineageTag: 3bc1c22d-bfdd-49f2-bda2-6c5c63542432
+
+	column Column
+		formatString: 0
+		lineageTag: 8b1554c6-2fd6-4a0e-9445-aed09ece6d97
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _Measures = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = cf9b638658d04876982ea95d772bca15
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+
