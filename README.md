@@ -7,11 +7,11 @@ An interactive, two-page Power BI dashboard designed to analyze ride completions
 ## 🖼️ Dashboard Preview
 
 ### 1. Landing Page (Home)
-![Home Page](D:\Coding_Projects\PowerBI\Uber_Dashboard\Landing page.png)
+![Home Page](./assets/home_page.png)
 * **Purpose:** Minimalist landing interface providing smooth navigation to key overview dashboards (`Home` & `Overview`).
 
 ### 2. Operational Overview
-![Overview Page](D:\Coding_Projects\PowerBI\Uber_Dashboard\Overview Page.png)
+![Overview Page](./assets/overview_page.png)
 * **Key Metrics:** Tracks 93K Completed Bookings, 57K Lost Bookings, 52M Total Revenue, 2.51M Total Distance, and 24.64 Average Ride Distance.
 * **Vehicle Breakdown:** Highlights performance across Auto, Bike, Go Mini, Go Sedan, Premier Sedan, and Uber XL.
 * **Location Analytics:** Identifies top pickup locations (e.g., *Khandsa*) and top drop locations (e.g., *Ashram*).
